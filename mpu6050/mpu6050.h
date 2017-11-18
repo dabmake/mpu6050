@@ -3,6 +3,14 @@
 
 
 #define MPU6050_AUX_VDDIO          0x01   // R/W
+
+#define MPU6050_XG_OFFSET_H        0x13
+#define MPU6050_XG_OFFSET_L        0x14
+#define MPU6050_YG_OFFSET_H        0x15
+#define MPU6050_YG_OFFSET_L        0x16
+#define MPU6050_ZG_OFFSET_H        0x17
+#define MPU6050_ZG_OFFSET_L        0x18
+
 #define MPU6050_SMPLRT_DIV         0x19   // R/W
 #define MPU6050_CONFIG             0x1A   // R/W
 #define MPU6050_GYRO_CONFIG        0x1B   // R/W

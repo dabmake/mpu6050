@@ -1,5 +1,6 @@
 
-#include <Wire.h>
+#include <i2c_t3.h>
+//#include <Wire.h>
 #include "mpu6050.h"
 
 void setup()
@@ -42,6 +43,14 @@ void setup()
 
   // Clear the 'sleep' bit to start the sensor.
   MPU6050_write_reg (MPU6050_PWR_MGMT_1, 0);
+
+  MPU6050_write_reg (MPU6050_CONFIG, MPU6050_DLPF_5HZ); 
+  MPU6050_write_reg (MPU6050_XG_OFFSET_H, byte(0));
+  MPU6050_write_reg (MPU6050_XG_OFFSET_L, byte(40));
+  MPU6050_write_reg (MPU6050_YG_OFFSET_H, byte(0b11111111));
+  MPU6050_write_reg (MPU6050_YG_OFFSET_L, byte(0b11100110));
+  MPU6050_write_reg (MPU6050_ZG_OFFSET_H, byte(0));
+  MPU6050_write_reg (MPU6050_ZG_OFFSET_L, byte(25));
 }
 
 
